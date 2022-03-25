@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Yiting Zheng</title>
+	<script src="https://kit.fontawesome.com/29509bdc99.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Inter">
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-D8H86YF7K6"></script>
 	<script>
@@ -21,33 +24,25 @@
 
 
 <body>
-	<!-- Header is a sematic tag page that aids readability -->
 	<header>
-		<a href="#main">Skip to Main Content</a><br><br>
+		<a class="skip" href="#main">Skip to Main Content</a>
+		<img src="images/personal-logo-name.png" alt="a personal logo designed by myself" id = "logo">
 		<nav>
-			<img class="logo" src = "images/personal-logo.png" alt="my personal logo that inspired by traditional chinese color and seal carving where I designed using procreate" width="200"/>
 			<ul>
-				<!-- Since I am on the index file I added class = action to the link to index. -->
-				<li class="active"><a href = "index.html" >Home</a></li>
-				<li><a href = "about.html">About Me</a></li>
-				<li><a href = "resume.html">Resume</a></li>
-				<li><a href = "project.html">Projects</a></li>
+				<li class="active">&#127968;<a href = "index.html" >Home</a></li>
+				<li>&#x1F30F;<a href = "about.html">About</a></li>
+				<li>&#128173;<a href = "resume.html">Experience</a></li>
+				<li>&#128193;<a href = "project.html">Projects</a></li>
 			</ul>
 		</nav>
-		<!-- The h1 is a semantic tag that aids accessibility -->
-		<h1>Yiting's Portfolio</h1>
-
 	</header>
 
-	<!-- Every page should have a main tag for accessibility -->
+		<h1>Hello! I am Yiting, the UX designer.</h1>
+
 	<main id="main">
-		<p>Hello I’m Yiting, the UX designer. <br><br>Welcome to my website!
-			I inspire and empower people through innovative design.
-			I am currently studying Human-Computer Interaction at the University of Michigan.
-			Besides design, I am passionate about music, travelling, and plants!</p><br>
+		<p>I inspire and empower people through innovative design. I am currently studying Human-Computer Interaction at the University of Michigan. Besides design, I am passionate about music, travelling, and plants!</p><br>
         <img src = "images/portrait-illustration.png" alt="a illustration of my self portrait that I designed using procreate on my iPad Pro which is my main design toll for drawing my artwork" width="200"/>
 
-		<!-- Make sure your anchor tags have a link (href) and a clickable component -->
 
 		<p>As an UX designers, I am responsible for making sure that the user’s interaction with a digital product is as fast, easy and efficient as possible. 
 			While I care about the visuals, I map out the user journey and strategies to solve users’ pain points and meet their needs. 
@@ -56,22 +51,51 @@
 
 		<p>
 			On this website, you can explore some of my design work and learn more about me.
-			During the COVID quarantine, I started collecting plants as a hobby. As for now, I have collected over 40 different species. 
-			My Favorite music genre is K-pop. My favorite music groups are BLACKPINK, (G)I-DLE, and IVE. Feel free to connect with me through email, Instagram, and LinkedIn.
+			During the COVID quarantine, I started collecting plants as a hobby. As for now, I have collected over 40 different species. I mainly collected philodendron, monstera and alocasia species.
+			My Favorite music genre is K-pop. My favorite music groups are BLACKPINK, (G)I-DLE, and I'VE. 
         </p><br>
 
 
         <img src = "images/thumbnail-purplepages.png" alt="iphone mockup for ux project called purple pages where the background is grey with the shadow of leaves" width="200"/>
 		<img src = "images/thumbnail-sage.png" alt="three iphone mockup screens for sage where the background is light green " width="200"/>
-		<img src = "images/thumbnail-consulting.png" alt="a banner design for ux consulting project where the background is light orange with the client logo on the top" width="200"/>
-		<img src = "images/thumbnail-architecture.jpg" alt="two architecture building with a  blue sky background" width="200"/>
+		<img src = "images/thumbnail-triplay.png" alt="a banner design for triplay project which is an application focus on the layover during travelling" width="200"/>
+		<img src = "images/thumbnail-triplay2.png" alt="two architecture building with a  blue sky background" width="200"/>
 
     </main>
 
-	<!-- Footer is a sematic tag page that aids readability -->
+	<form action="https://formspree.io/f/xlezwejl" method="POST">
+		<fieldset>
+			<legend>Contact Me</legend>
+
+			<label for="name_id">Your Name</label>
+			<input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+
+			<label for="email_id">Your Email</label>
+			<input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
+
+			<label for="phone_id">Your Phone Number</label>
+			<input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+			<label for="msg">Leave A Message</label>
+			<textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
+
+			<input type="checkbox" checked="checked" name="remember" id = "cBox">
+			<label for ="cBox">Remember me</label>
+
+		  </fieldset>
+		  <button type="submit">Send</button>
+	</form>
+
+
 	<footer>
-		<p>Yiting Zheng &copy; 2022</p><br>
-		<p>Contact me via <a href = "https://www.linkedin.com/in/yiting-zheng-020358182/">LinkedIn</a>  and <a href = "https://www.instagram.com/ethanz97/">Instagram</a></p>
+		<p>University of Michigan School of Information <br/>
+			&copy; Yiting Zheng MSI'23 - SI539 Web Design Winter 2022</p>
+		<a href="http://linkedin.com" aria-label="LinkedIn">
+			<i class="fa-brands fa-linkedin-in"></i></a>
+		<a href="http://instagram.com" aria-label="Instagram">
+			<i class="fa-brands fa-instagram"></i></a>
+		<a href="http://mail.google.com" aria-label="Instagram">
+			<i class="fa-solid fa-envelope"></i></a>
 	</footer>
 </body>
 </html>

@@ -3,10 +3,10 @@ body{
 	padding:1%;
 	font-size:150%;
 	line-height: 1.2;
-}
-
-p{
-	margin-top: 10px;
+	background-image: url('../images/background-img.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 h1{
@@ -14,61 +14,59 @@ h1{
 	font-weight: bold;
 	color: rgb(16, 25, 58);
 	margin: 30px 0;
+	text-align: center;
+	font-family: "Sofia", sans-serif;
+}
+
+p{
+	margin-top: 10px;
+	font-family: 'Inter', sans-serif;
 }
 
 footer{
-	background-color: lightblue;
-	padding: 32px 8px;
-	margin-top: 30px;
+	background-color: grey;
+	color: white;
+	padding: 15px 0;
 	text-align: center;
 }
 
 .active{
 	background: lightgrey;
-    text-transform: uppercase;
 	font-weight: bold;
-	border: 2px solid rgb(6, 6, 109);
-
 }
 
-img:nth-child(even){
-    width: 300px;
-	padding: 10 px;
-	height: auto;
-    border: 3px solid darkgrey;
-    border-radius: 15px;
-    margin: 10px;
-	box-shadow: 12px 12px 2px 1px rgba(103, 144, 233, 50%);
-}
+img{
+	border: 1px solid rgb(43, 43, 43);
+	border-radius: 5px;
+	padding: 5px;
+	height: 250px;
+	width: 250px;
+	object-fit: cover;
+	align-content: center;
+	transition: all .5s ease-in-out;
 
-img:nth-child(odd){
-    width: 300px;
-	padding: 10 px;
-	height: auto;
-    border: 3px solid rgb(71, 71, 71);
-    border-radius: 15px;
-    margin: 10px;
-	box-shadow: 12px 12px 2px 1px rgb(33, 2, 145, 70%);
 }
 
 img:hover{
-	background-color: lightcyan;
-	filter: grayscale(100%);
-	border: dashed
+	transform: scale(1.2);
+    cursor: pointer;
+	background-color: #ddd;
 }
 
 
 nav li{
-	background-color: lightblue;
-	padding:10px;
-	width:25%;
-	display: inline-block;
-	width: 20%;
-	text-align: center;
-	height: 50px;
-	align-items: center;
-
+    display: flex;
+    flex-direction: column;
+	padding: 10px;
 }
+
+li:hover{
+	border:none;
+	background:rgba(0, 0, 0, 0.4);
+	background:#fff;
+	padding:20px 20px #000000;
+	color:#1b1b1b;
+  }
 
 header img {
 	width: 70px;
@@ -76,4 +74,166 @@ header img {
 	background-color: white;
 	border: none;
 	box-shadow: none;
+}
+
+a.skip{
+	background: white;
+	padding: 6px;
+	-webkit-transition: top 1s ease-out;
+	transition: left 1s ease-out;
+	z-index: 1;
+	position: absolute;
+	left: -500px;
+	overflow: hidden;
+}
+
+
+/* Form styling */
+
+form {
+	border: 2px solid #414141;
+	font-family: "Intel", sans-serif;
+}
+
+legend{
+	font-size: 125%;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+label{
+	display: block;
+	margin-right:10px;
+}
+
+input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+span{
+	margin-left:20%;
+	font-family: italic;
+	font-weight: bold;
+}
+
+textarea{
+	width: 100%;
+	height: 35vh;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+input[type=checkbox]{
+	  display:inline;
+	  width:inherit;
+}
+
+input[type=submit] {
+	background-color: #38803C;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+input[type=submit]:hover {
+	opacity: 0.8;
+}
+
+button {
+	background-color: #4e584f;
+	border: none;
+	color: white;
+	padding: 15px 40px;
+	border-radius: 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+*:focus{
+	background-color: yellow;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (min-width: 770px) {
+	form{
+	  width: 80%;
+	  margin: 0 auto;
+	}
+
+	input{
+	  width:80%;
+	}
+
+	textarea{
+	  width:80%;
+	  height: 25vh;
+   }
+
+   div + label{
+	  line-height: 25vh;
+	  vertical-align:top;
+   }
+  }
+
+/* Form styling ends here */
+
+#logo{
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    margin: 0 auto;
+}
+
+@keyframes mymove {
+    from  {width: 25px; opacity: 0;}
+    to {width: 475px; opacity: 1;}
+}
+
+/* screen-size is greater than 900px */
+@media screen and (min-width: 900px) {
+    header, .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+    #logo {
+        margin: 0;
+    }
+    header {
+        justify-content: space-between;
+    }
+    .nav_links {
+        justify-content: center;
+    }
+    nav {
+        align-self: center;
+    }
+}
+
+
+@media (prefers-reduced-motion) {
+    #logo {
+		animation: none;
+	}
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
