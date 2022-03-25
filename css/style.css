@@ -198,6 +198,8 @@ button {
     animation-duration: 5s;
     animation-timing-function: linear;
     margin: 0 auto;
+	height: 30%;
+	width: 60%;
 }
 
 @keyframes mymove {
@@ -225,9 +227,29 @@ button {
     }
 }
 
+.box{
+	background-color: rgb(44, 52, 70);
+	border-radius: 10px;
+	/* width: 100px;
+	height: 100px; */
+	animation-name: rotate;
+	animation-duration: 0.7s;
+}
+
+@keyframes rotate {
+	0% {
+	  transform: rotate(0);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+}
 
 @media (prefers-reduced-motion) {
     #logo {
+		animation: none;
+	}
+	.box{
 		animation: none;
 	}
 }
@@ -237,3 +259,21 @@ button {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+h2{
+	font-size: 34px;
+	font-weight: 200;
+	font-family: 'Inter', sans-serif;
+}
+
+
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 30px;
+}
+
+
+
+
